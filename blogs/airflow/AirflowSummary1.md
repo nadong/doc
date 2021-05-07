@@ -1,6 +1,8 @@
 # Airflow 搭建Data Pipeline 实战总结
 
-Airflow 作为一款开源分布式任务调度框架，已经在业内广泛的应用。笔者这里借此机会总结一下，Freewheel Transformer团队在近两年的使用Airflow作为调度器，编排各种批处理场景下的ETL Data Pipelines的经验。本文主要围绕Airflow相关的经验，想要了解更多Spark和EMR 相关文章，请参阅团队其他文章[Apache Spark 3.0 新特性在 FreeWheel 核心业务数据团队的应用与实战](https://www.infoq.cn/article/ILfkik8fN5ajQwGqJzoZ)[“榨干”EMR开销！AWS EMR在搭建大数据平台ETL的应用实践](https://www.infoq.cn/article/LAY1Uag3LGLq9OCDFc6W)
+Airflow 作为一款开源分布式任务调度框架，已经在业内广泛的应用。笔者这里借此机会总结一下，Freewheel Transformer团队在近两年的使用Airflow作为调度器，编排各种批处理场景下的ETL Data Pipelines的经验。本文主要围绕Airflow相关的经验，想要了解更多Spark和EMR 相关文章，请参阅团队其他文章
+* [Apache Spark 3.0 新特性在 FreeWheel 核心业务数据团队的应用与实战](https://www.infoq.cn/article/ILfkik8fN5ajQwGqJzoZ)
+* [“榨干”EMR开销！AWS EMR在搭建大数据平台ETL的应用实践](https://www.infoq.cn/article/LAY1Uag3LGLq9OCDFc6W)
 
 ## 应用场景简介
 在公司批数据处理的使用场景中，主要分成两种，一种是固定时间调度的 **ETL pipelines** , 比如hourly, daily, weekly等pipelines，用于日常数据建仓; 另一种是没有固定调度时间的 **修数据pipelines** 。 
